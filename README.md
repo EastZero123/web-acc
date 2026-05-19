@@ -1,65 +1,99 @@
-# test README
-
-This is the README for your extension "test". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+# 웹 접근성 검사기 확장프로그램 가이드
 
 ---
 
-## Working with Markdown
+## 목차
 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+1. [소개](#1-소개)
+2. [설치 및 환경 설정](#2-설치-및-환경-설정)
+3. [주요 기능](#3-주요-기능)
+4. [사용 방법](#4-사용-방법)
+5. [결과 확인](#5-결과-확인)
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
+---
 
-## For more information
+## 1. 소개
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+VS Code 에디터 내 작업 소스 중 웹 접근성에 대한 미준수 코드를 탐지 및 강조처리하는 확장 프로그램입니다.
 
-**Enjoy!**
+### 웹 접근성 기준
+
+4개 원칙 24개 검사항목 (한국형 웹 콘텐츠 접근성(KWCAG) 지침 2.1  기준)
+
+| 구분 | 검사항목 | 규칙 수 |
+|---|---|---|
+| 인식의 용이성 | 적절한 대체 텍스트, 자막 제공, 색에 무관한 콘텐츠 인식, 명확한 지시사항 제공, 텍스트 콘텐츠 명도 대비, 자동 재생 금지, 콘텐츠 간 구분 | 7개 |
+| 운용의 용이성 | 키보드 사용 보장, 초점 이동, 조작 가능, 응답 시간 조절, 정지 기능 제공, 깜빡임과 번쩍임 사용 제한, 반복 영역 건너뛰기, 제목 제공, 적절한 링크 텍스트 | 9개 |
+| 이해의 용이성 | 기본 언어 표시, 사용자 요구에 따른 실행, 콘텐츠 선형 구조, 표의 구성, 레이블 제공, 오류 정정 | 6개 |
+| 견고성 | 마크업 오류 방지, 웹 애플리케이션 접근성 준수 | 2개 |
+
+### 기술 스택
+
+- **NODE:** 22.20.0(nvm 사용)
+- **VS Code:** 1.120.0(2026-05-12 ver)
+- **package:** yo(7.0.0), generator-code(1.11.18)
+
+---
+
+## 2. 설치 및 환경 설정
+기본 설치 프로그램이 있는 경우 2.3 부터 진행
+
+### 2.1 Node 설치 (Window 기준)
+
+`https://nodejs.org/ko/download` 에서 하단 msi설치 프로그램 다운 후 설치 진행
+
+### 2.2 VS Code 설치
+
+`https://code.visualstudio.com/download` 에서 설치 프로그램 다운 후 설치 진행
+
+### 2.3 패키지 설치
+
+cmd창을 연 후 node 설치 여부 확인 및 패키지 설치 진행
+```bash
+# node 버전 확인
+node --version
+
+# 플러그인 제작 라이브러리 설치
+npm install -g yo generator-code
+```
+
+### 2.4 프로젝트 생성
+```bash
+# 프로젝트 생성
+yo code
+# 설정 선택:
+# ? What type of extension do you want to create? New Extension (JavaScript)
+# ? What's the name of your extension? [제목 작성]
+# ? What's the identifier of your extension? [제목 작성]
+# ... 나머지는 기본값 엔터
+```
+
+---
+
+## 3. 주요 기능
+
+- **[기능 1: 내용을 입력하세요]**: [기능에 대한 설명을 입력하세요]
+- **[기능 2: 내용을 입력하세요]**: [기능에 대한 설명을 입력하세요]
+- **[기능 3: 내용을 입력하세요]**: [기능에 대한 설명을 입력하세요]
+
+---
+
+## 4. 사용 방법
+
+- **단계 1: [단계를 입력하세요]**
+  - [상세 실행 방법을 입력하세요]
+- **단계 2: [단계를 입력하세요]**
+  - [상세 실행 방법을 입력하세요]
+- **단계 3: [단계를 입력하세요]**
+  - [상세 실행 방법을 입력하세요]
+
+---
+
+## 5. 결과 확인
+
+- **[결과 확인 항목 1]**
+  - [확인 및 조치 방법을 입력하세요]
+- **[결과 확인 항목 2]**
+  - [확인 및 조치 방법을 입력하세요]
+- **[결과 확인 항목 3]**
+  - [확인 및 조치 방법을 입력하세요]
