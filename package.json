@@ -1,0 +1,47 @@
+{
+  "name": "test",
+  "displayName": "test",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.120.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:accessibility-checker.runCheck"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "accessibility-checker.runCheck",
+        "title": "웹 접근성 검사 실행",
+        "category": "Accessibility"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "accessibility-checker.runCheck",
+          "group": "navigation",
+          "when": "resourceLangId == html"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.120.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.39.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}

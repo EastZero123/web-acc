@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>접근성 테스트 페이지</title>
+
+    <style>
+        .card {
+
+            border: 1px solid #ccc;
+
+            padding: 20px;
+
+            width: 300px;
+
+        }
+
+
+
+        .fake-button {
+
+            color: blue;
+
+            text-decoration: underline;
+
+            cursor: pointer;
+
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+    <header>
+
+        <img src="logo_final_v2_dark.png" width="150">
+
+    </header>
+
+
+
+    <main>
+
+        <h3>회원 정보 입력</h3>
+
+
+
+        <div class="card">
+
+            <p>사용자 이름</p>
+
+            <input type="text" placeholder="이름을 입력하세요">
+
+
+
+            <p>이메일 주소</p>
+
+            <input type="email">
+
+
+
+            <br><br>
+
+
+
+            <a onclick="alert('제출되었습니다!')" class="fake-button">
+
+                <img src="submit_icon.png" alt="">
+
+            </a>
+
+        </div>
+
+
+
+        <section>
+
+            <p style="color: red;">* 빨간색으로 표시된 항목은 필수 입력입니다.</p>
+
+
+
+            <h6>이벤트 안내 이미지</h6>
+
+            <img src="event-banner.jpg" alt="이벤트 안내하는 홍보용 이미지 사진" width="100%">
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <p style="color: #eee; background-color: #fff;">© 2026 Accessibility Test Lab.</p>
+
+    </footer>
+
+
+
+</body>
+
+
+
+</html>
